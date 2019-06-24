@@ -43,5 +43,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initialize();
+        this.control = Control.getInstance();
     }
 }
