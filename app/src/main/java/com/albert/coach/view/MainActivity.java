@@ -8,6 +8,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.albert.coach.R;
+import com.albert.coach.controller.Control;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
     private TextView lbResult;
     private ImageView imgSmiley;
 
+    private Control control;
+
+    /**
+     * initialisation link with graphical component
+     */
     private void initialize()
     {
         weighttxt = (EditText)findViewById(R.id.txtWeight);
@@ -29,13 +35,13 @@ public class MainActivity extends AppCompatActivity {
         btnrd = (RadioButton)findViewById(R.id.btnMan);
 
         lbResult = (TextView)findViewById(R.id.lbResult);
-        
+
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        initialize();
     }
 }
