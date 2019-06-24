@@ -6,6 +6,8 @@ import static org.junit.Assert.*;
 
 public class ProfilTest {
 
+    private Profil mProfil = new Profil(67,165,35,0);
+
     @Test
     public void getMessage() {
     }

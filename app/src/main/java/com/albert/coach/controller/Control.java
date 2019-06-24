@@ -38,6 +38,7 @@ public final class Control {
     {
         profil = new Profil(weight,size,age,sex);
     }
+
     /**
      *Recovery bmi from profil
      * @return Bmi
@@ -46,12 +47,14 @@ public final class Control {
     {
         return profil.getBmi();
     }
+
     /**
      * recovery message from profil
      * @return message
      */
     public String getMessage()
     {
-        return profil.getMessage();
+        return getMessage();
     }
+
 }
