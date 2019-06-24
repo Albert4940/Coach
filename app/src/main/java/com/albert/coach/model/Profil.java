@@ -38,6 +38,35 @@ public class Profil {
         return message;
     }
 
+    public void calculBmi(){
+        float sizeM = ((float)size)/100;
+        this.bmi = (float)(1.2*weight/(sizeM*sizeM)+(0.23*age)-(10.83*sex)-5.4);
+    }
+
+    private void resultBmi(){
+    Integer min, max;
+
+        if(sex==0)
+        {
+            min = minWoman;
+            max = maxWoman;
+        }else
+        {
+            min = minMan;
+            max = maxMan;
+        }
+
+        message = "normal";
+        if(bmi<min)
+        {
+            message = "trop faible"
+        }else
+            if(bmi>max)
+            {
+                message = "trop eleve";
+            }
+    }
+
     public Profil(Integer weight, Integer size, Integer age, Integer sex) {
         this.weight = weight;
         this.size = size;
