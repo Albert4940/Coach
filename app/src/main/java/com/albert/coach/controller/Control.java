@@ -38,4 +38,13 @@ public final class Control {
     {
         profil = new Profil(weight,size,age,sex);
     }
+    /**
+     *Recovery bmi from profil
+     * @return Bmi
+     */
+    public float getBmi()
+    {
+        return profil.getBmi();
+    }
+
 }
