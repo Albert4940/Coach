@@ -20,5 +20,10 @@ public final class Control {
      * create an instance
      * @return instance
      */
-    
+    public static final Control getInstance()
+    {
+        if(Control.instance == null)
+            Control.instance = new Control();
+        return Control.instance;
+    }
 }
