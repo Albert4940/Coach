@@ -59,7 +59,7 @@ public class Profil {
         message = "normal";
         if(bmi<min)
         {
-            message = "trop faible"
+            message = "trop faible";
         }else
             if(bmi>max)
             {
@@ -72,5 +72,7 @@ public class Profil {
         this.size = size;
         this.age = age;
         this.sex = sex;
+        this.calculBmi();
+        this.resultBmi();
     }
 }
