@@ -46,5 +46,12 @@ public final class Control {
     {
         return profil.getBmi();
     }
-
+    /**
+     * recovery message from profil
+     * @return message
+     */
+    public String getMessage()
+    {
+        return profil.getMessage();
+    }
 }
