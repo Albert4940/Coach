@@ -11,14 +11,26 @@ import com.albert.coach.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText weigthtxt;
+    private EditText weighttxt;
     private EditText sizetxt;
     private EditText agetxt;
 
     private RadioButton btnrd;
+
     private TextView lbResult;
     private ImageView imgSmiley;
-    
+
+    private void initialize()
+    {
+        weighttxt = (EditText)findViewById(R.id.txtWeight);
+        sizetxt = (EditText)findViewById(R.id.txtSize);
+        agetxt = (EditText)findViewById(R.id.txtAge);
+
+        btnrd = (RadioButton)findViewById(R.id.btnMan);
+
+        lbResult = (TextView)findViewById(R.id.lbResult);
+        
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
