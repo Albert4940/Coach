@@ -1,10 +1,10 @@
 package com.albert.coach.controller;
 
-import com.albert.coach.model.Profil;
+import com.albert.coach.model.Profile;
 
 public final class Control {
 
-    private Profil profil;
+    private Profile profil;
 
     private static Control instance = null;
 
@@ -36,7 +36,7 @@ public final class Control {
      */
     public void createProfil(Integer weight, Integer size, Integer age, Integer sex)
     {
-        profil = new Profil(weight,size,age,sex);
+        profil = new Profile(weight,size,age,sex);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class Control {
      */
     public String getMessage()
     {
-        return getMessage();
+        return profil.getMessage();
     }
 
 }

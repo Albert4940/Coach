@@ -1,6 +1,6 @@
 package com.albert.coach.model;
 
-public class Profil {
+public class Profile {
     //Proprieties
     private Integer weight ;
     private Integer size ;
@@ -44,7 +44,8 @@ public class Profil {
     }
 
     private void resultBmi(){
-    Integer min, max;
+    Integer min;
+    Integer max;
 
         if(sex==0)
         {
@@ -67,7 +68,7 @@ public class Profil {
             }
     }
 
-    public Profil(Integer weight, Integer size, Integer age, Integer sex) {
+    public Profile(Integer weight, Integer size, Integer age, Integer sex) {
         this.weight = weight;
         this.size = size;
         this.age = age;
