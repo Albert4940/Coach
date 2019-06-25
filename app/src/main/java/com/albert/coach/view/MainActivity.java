@@ -1,5 +1,6 @@
 package com.albert.coach.view;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -77,10 +78,13 @@ public class MainActivity extends AppCompatActivity {
                 }else
                 {
                     posterResult(weight,size,age,sex);
+                    //Toast.makeText(MainActivity.this,"Input Correct",Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
+
+
 
     /**
      * poster of BMI and message
@@ -89,16 +93,32 @@ public class MainActivity extends AppCompatActivity {
      * @param age
      * @param sex
      */
+
+
     private void posterResult(Integer weight, Integer size, Integer age, Integer sex)
     {
+        this.control.createProfil(weight,size,age,sex);
+        float bmi = control.getBmi();
+        String message = control.getMessage();
 
+        if(message == "normal")
+        {
+            lbResult.setTextColor(Color.GREEN);
+        }
+        else
+        {
+            lbResult.setTextColor(Color.RED);
+        }
+
+        lbResult.setText(message);
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        initialize();
         this.control = Control.getInstance();
+        initialize();
+
     }
 }
