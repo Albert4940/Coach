@@ -50,11 +50,49 @@ public class MainActivity extends AppCompatActivity {
         ((Button) findViewById(R.id.btnCalc)).setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"test",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this,"test",Toast.LENGTH_SHORT).show();
+                Integer weight = 0;
+                Integer size = 0;
+                Integer age = 0;
+                Integer sex = 0;
+
+                try{
+
+                    weight = Integer.parseInt(weighttxt.getText().toString());
+                    size = Integer.parseInt(sizetxt.getText().toString());
+                    age = Integer.parseInt(agetxt.getText().toString());
+
+                }catch (Exception e)
+                {
+                }
+
+                if(btnrd.isChecked())
+                {
+                    sex = 1;
+                }
+
+                if(weight == 0 || size == 0 || age == 0)
+                {
+                    Toast.makeText(MainActivity.this,"Input incorrect",Toast.LENGTH_SHORT).show();
+                }else
+                {
+                    posterResult(weight,size,age,sex);
+                }
             }
         });
     }
 
+    /**
+     * poster of BMI and message
+     * @param weight
+     * @param size
+     * @param age
+     * @param sex
+     */
+    private void posterResult(Integer weight, Integer size, Integer age, Integer sex)
+    {
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
