@@ -41,6 +41,13 @@ public abstract class Serializer {
         }
     }
 
+    /**
+     *
+     * deserializer an object
+     * @param filename
+     * @param context
+     * @return
+     */
     public static Object deSerialize(String filename, Context context){
         try
         {

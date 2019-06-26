@@ -3,6 +3,7 @@ package com.albert.coach.controller;
 import android.content.Context;
 
 import com.albert.coach.model.Profile;
+import com.albert.coach.tools.Serializer;
 
 public final class Control {
 
@@ -41,6 +42,7 @@ public final class Control {
     public void createProfil(Integer weight, Integer size, Integer age, Integer sex, Context context)
     {
         profil = new Profile(weight,size,age,sex);
+        Serializer.serialize(filename,profil,context);
     }
 
     /**

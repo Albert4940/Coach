@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void posterResult(Integer weight, Integer size, Integer age, Integer sex)
     {
-        this.control.createProfil(weight,size,age,sex);
+        this.control.createProfil(weight,size,age,sex,this);
         float bmi = control.getBmi();
         String message = control.getMessage();
 
