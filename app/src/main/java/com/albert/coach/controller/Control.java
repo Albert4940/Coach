@@ -1,5 +1,7 @@
 package com.albert.coach.controller;
 
+import android.content.Context;
+
 import com.albert.coach.model.Profile;
 
 public final class Control {
@@ -36,7 +38,7 @@ public final class Control {
      * @param age
      * @param sex 1 for man 0 for woman
      */
-    public void createProfil(Integer weight, Integer size, Integer age, Integer sex)
+    public void createProfil(Integer weight, Integer size, Integer age, Integer sex, Context context)
     {
         profil = new Profile(weight,size,age,sex);
     }
