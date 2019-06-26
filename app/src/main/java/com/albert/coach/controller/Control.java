@@ -7,9 +7,9 @@ import com.albert.coach.tools.Serializer;
 
 public final class Control {
 
-    private Profile profil;
+    private static Profile profil;
 
-    private String filename="saveprofil";
+    private static String filename="saveprofil";
 
     private static Control instance = null;
 
@@ -61,6 +61,11 @@ public final class Control {
     public String getMessage()
     {
         return profil.getMessage();
+    }
+
+    private static void recoverySerialize(Context context)
+    {
+        profil = (Profile)Serializer.deSerialize(filename, context);
     }
 
 }
