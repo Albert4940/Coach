@@ -65,9 +65,43 @@ public final class Control {
         return profil.getMessage();
     }
 
+    /**
+     * recovery serialized object (profil)
+     * @param context
+     */
     private static void recoverySerialize(Context context)
     {
         profil = (Profile)Serializer.deSerialize(filename, context);
     }
+    public Integer getWeight() {
+
+        if (profil==null)
+            return null;
+        else
+            return profil.getWeight();
+    }
+
+    public Integer getSize() {
+
+        if (profil==null)
+            return null;
+        else
+        return profil.getSize();
+    }
+    public Integer getAge() {
+
+        if (profil==null)
+            return null;
+        else
+            return profil.getAge();
+    }
+    public Integer getSex() {
+
+        if (profil==null)
+            return null;
+        else
+            return profil.getSex();
+    }
+
 
 }
