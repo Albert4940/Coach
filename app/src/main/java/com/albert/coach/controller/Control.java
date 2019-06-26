@@ -25,10 +25,12 @@ public final class Control {
      * create an instance
      * @return instance
      */
-    public static final Control getInstance()
+    public static final Control getInstance(Context context)
     {
-        if(Control.instance == null)
+        if(Control.instance == null) {
             Control.instance = new Control();
+            recoverySerialize(context);
+        }
         return Control.instance;
     }
 
