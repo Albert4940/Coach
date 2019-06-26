@@ -1,6 +1,8 @@
 package com.albert.coach.model;
 
-public class Profile {
+import java.io.Serializable;
+
+public class Profile implements Serializable {
     //Proprieties
     private Integer weight ;
     private Integer size ;
