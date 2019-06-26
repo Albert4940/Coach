@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
             lbResult.setTextColor(Color.RED);
         }
 
-        lbResult.setText(message);
+        lbResult.setText(bmi+" : "+message);
     }
 
     @Override
