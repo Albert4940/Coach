@@ -6,6 +6,8 @@ public final class Control {
 
     private Profile profil;
 
+    private String filename="saveprofil";
+
     private static Control instance = null;
 
     /**
