@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText agetxt;
 
     private RadioButton btnrd;
+    private RadioButton btnrdW;
 
     private TextView lbResult;
     private ImageView imgSmiley;
@@ -37,10 +38,13 @@ public class MainActivity extends AppCompatActivity {
         agetxt = (EditText)findViewById(R.id.txtAge);
 
         btnrd = (RadioButton)findViewById(R.id.btnMan);
+        btnrdW = (RadioButton)findViewById(R.id.btnWoman);
 
         lbResult = (TextView)findViewById(R.id.lbResult);
-        listenBtn();
 
+        this.control = Control.getInstance(this);
+        listenBtn();
+        recoveryProfil();
     }
 
     /**
@@ -110,14 +114,28 @@ public class MainActivity extends AppCompatActivity {
             lbResult.setTextColor(Color.RED);
         }
 
-        lbResult.setText(bmi+" : "+message);
+        lbResult.setText(String.format("0.01f",bmi)+" : BMI "+message);
+    }
+
+    private void recoveryProfil(){
+     if(control.getWeight() != null)
+     {
+         weighttxt.setText(control.getWeight().toString());
+         agetxt.setText(control.getAge().toString());
+         sizetxt.setText(control.getSize());
+         btnrdW.setChecked(true);
+         if(control.getSex() == 1)
+             btnrd.setChecked(true);
+         //Click simulation on my calculate btn
+         ((Button)findViewById(R.id.btnCalc)).performClick();
+
+     }
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.control = Control.getInstance(this);
         initialize();
 
     }
