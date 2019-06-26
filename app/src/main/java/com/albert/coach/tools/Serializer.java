@@ -1,4 +1,5 @@
 package com.albert.coach.tools;
 
-public class Serializer {
+public abstract class Serializer {
+    
 }
